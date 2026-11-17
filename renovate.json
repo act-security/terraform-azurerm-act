@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:best-practices", ":semanticCommits", "helpers:pinGitHubActionDigestsToSemver"],
+  "labels": ["dependencies"],
+  "timezone": "Asia/Jerusalem",
+  "schedule": ["before 6am on monday"],
+  "minimumReleaseAge": "7 days",
+  "internalChecksFilter": "strict",
+  "prConcurrentLimit": 5,
+  "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "schedule": ["at any time"],
+    "minimumReleaseAge": null
+  },
+  "packageRules": [
+    { "matchManagers": ["terraform"], "enabled": false },
+    { "matchManagers": ["github-actions"], "groupName": "github actions", "semanticCommitType": "ci", "semanticCommitScope": "deps" },
+    { "matchManagers": ["mise"], "groupName": "toolchain", "semanticCommitType": "chore", "semanticCommitScope": "deps" },
+    { "matchManagers": ["mise"], "matchPackageNames": ["terraform"], "groupName": null, "dependencyDashboardApproval": true }
+  ]
+}

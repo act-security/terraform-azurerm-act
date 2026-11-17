@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a vulnerability
+    url: https://github.com/act-security/terraform-azurerm-act/security/advisories/new
+    about: Report security issues privately.
+  - name: Act provider documentation
+    url: https://registry.terraform.io/providers/act-security/act/latest/docs
+    about: Resources and data sources the module uses.
