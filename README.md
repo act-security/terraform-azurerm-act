@@ -47,7 +47,7 @@ Terraform 1.5.7 or later, the AzureRM provider 4.x and, for `tenant`, the AzureA
 
 ## Permissions
 
-Act's service principal gets these roles at the subscription or management group and nothing else: exactly what Act requests when you connect Azure from the Act console. The files in [`permissions/`](permissions) are the only source; the modules and this section are built from them, and CI fails when this section drifts from them. The custom role's description carries `[act:deployment-version=20261116-91ed635f]`.
+Act's service principal gets these roles at the subscription or management group and nothing else: exactly what Act requests when you connect Azure from the Act console. The files in [`permissions/`](permissions) are the only source; the modules and this section are built from them, and CI fails when this section drifts from them. The custom role's description carries `[act:deployment-version=20261116-fb05d8a2]`.
 
 ### Custom role
 

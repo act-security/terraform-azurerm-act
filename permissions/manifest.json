@@ -1,5 +1,5 @@
 {
-  "deployment_version": "20261116-91ed635f",
+  "deployment_version": "20261116-fb05d8a2",
   "custom_role": {
     "name_prefix": "ActScannerRole",
     "description": "Custom role for Act Security to scan Azure resources",
