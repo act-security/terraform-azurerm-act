@@ -1,0 +1,19 @@
+formatter: markdown table
+
+header-from: .header.md
+
+output:
+  file: README.md
+  mode: replace
+  template: |-
+    {{ .Content }}
+
+sort:
+  enabled: true
+  by: required
+
+settings:
+  anchor: false
+  hide-empty: true
+  html: false
+  lockfile: false

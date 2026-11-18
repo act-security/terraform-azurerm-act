@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Azure Kubernetes Service Cluster User Role",
+    "id": "4abbcc35-e782-43d8-92c5-2d3f1bd2253f",
+    "reason": "Lists the user kubeconfig of AKS clusters, so Act can connect to them."
+  },
+  {
+    "name": "Azure Kubernetes Service RBAC Reader",
+    "id": "7f6c6a51-bcf8-42ba-9220-52d62157d7db",
+    "reason": "Reads Kubernetes objects inside AKS clusters that use Azure RBAC, except secrets."
+  },
+  {
+    "name": "Reader",
+    "id": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+    "reason": "Reads every resource in the scope, so Act can inventory what exists."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Directory.Read.All",
+    "id": "7ab1d382-f21e-4acd-a863-ba3e13f7da61",
+    "reason": "Reads users, groups, devices and the directory structure."
+  },
+  {
+    "name": "Application.Read.All",
+    "id": "9a5d68dd-52b0-4cc2-bd40-abcf44ac3a30",
+    "reason": "Reads app registrations and service principals, including their credential metadata."
+  },
+  {
+    "name": "RoleManagement.Read.All",
+    "id": "c7fbd983-d9aa-4fa7-84b8-17382c103bc4",
+    "reason": "Reads Entra ID role definitions and assignments, including Privileged Identity Management."
+  },
+  {
+    "name": "Policy.Read.All",
+    "id": "246dd0d5-5bd0-4def-940b-0421030a5b68",
+    "reason": "Reads Conditional Access and the other tenant policies."
+  },
+  {
+    "name": "AuditLog.Read.All",
+    "id": "b0afded3-3588-46d8-8b3d-9842eff778da",
+    "reason": "Reads Entra ID audit and sign-in activity."
+  }
+]

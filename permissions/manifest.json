@@ -1,0 +1,44 @@
+{
+  "deployment_version": "20261116-fb05d8a2",
+  "custom_role": {
+    "name_prefix": "ActScannerRole",
+    "description": "Custom role for Act Security to scan Azure resources",
+    "actions_file": "custom-role-actions.json"
+  },
+  "builtin_roles_file": "builtin-roles.json",
+  "graph_app_roles_file": "graph-app-roles.json",
+  "permission_groups": [
+    {
+      "group": "access_map",
+      "label": "Access map",
+      "description": "Puts Reader's `*/read` in the custom role, so Act reads every resource through one role.",
+      "module": ".",
+      "actions_file": "access-map-actions.json",
+      "builtin_role_ids": []
+    },
+    {
+      "group": "kubernetes",
+      "label": "Kubernetes inside AKS clusters",
+      "description": "Lets Act fetch the user kubeconfig of AKS clusters and read the Kubernetes objects inside them.",
+      "module": ".",
+      "actions_file": "kubernetes-actions.json",
+      "builtin_role_ids": [
+        "7f6c6a51-bcf8-42ba-9220-52d62157d7db"
+      ]
+    },
+    {
+      "group": "activity_logs",
+      "label": "Activity logs",
+      "description": "Streams the activity log of every subscription in scope to Act's Event Hub, which Act reads as Azure Event Hubs Data Receiver.",
+      "module": "modules/activity-logs",
+      "builtin_role_ids": []
+    },
+    {
+      "group": "entra_logs",
+      "label": "Entra ID logs",
+      "description": "Streams the tenant's Entra ID audit and sign-in logs to Act's Event Hub.",
+      "module": "modules/entra-logs",
+      "builtin_role_ids": []
+    }
+  ]
+}
